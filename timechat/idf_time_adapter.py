@@ -13,6 +13,7 @@ class IdfTimeAdapter(TimeAdapter):
     LENGTH_PENALTY = -1/3
     FALLBACK_LOCATION = "Amsterdam"
     FALLBACK_PREPOSITION = "in"
+    LANGUAGE_FREQ_POWER = 1/3
 
     models = []
     
@@ -26,7 +27,8 @@ class IdfTimeAdapter(TimeAdapter):
         for lang in self.models:
             word_freq = self.models[lang]['word']
             freqs = [word_freq.get(token, 0) for token in tokens]
-            score = sum(freqs)/word_freq.N()
+            score = sum([math.pow(x, self.LANGUAGE_FREQ_POWER) for x in freqs])/ \
+                    math.pow(word_freq.N(), self.LANGUAGE_FREQ_POWER)
 
             if score > best_score:
                 best_score = score

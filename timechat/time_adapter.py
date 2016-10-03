@@ -12,7 +12,7 @@ class TimeAdapter(LogicAdapter):
         ],
         'nl': [
             u"{Prep} {location} is het nu {time}.",
-            u"{Prep} {locatiion} is de lokale tijd {time}.",
+            u"{Prep} {location} is de lokale tijd {time}.",
             u"{time} is de lokale tijd {prep} {location}"
         ]
     }
