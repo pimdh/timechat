@@ -10,7 +10,7 @@ from api import Api
 from time_adapter import TimeAdapter
 
 class IdfTimeAdapter(TimeAdapter):
-    LENGTH_PENALTY = -1/3
+    LENGTH_PENALTY = -1/2
     FALLBACK_LOCATION = "Amsterdam"
     FALLBACK_PREPOSITION = "in"
     LANGUAGE_FREQ_POWER = 1/3
