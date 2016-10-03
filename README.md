@@ -1,5 +1,5 @@
 # TimeChat
-TimeChat is a chatbot that is able to answer questions in natural language about the current time in a particular place in responses in natural language. It is built on top of ChatterBot and consists of three parts: location extraction and language determination; geocoding; response generation.
+TimeChat is a chatbot that is able to answer questions in natural language about the local time in a particular place and responds in natural language. It is built on top of ChatterBot and consists of three parts: location extraction and language determination; geocoding; response generation. A Flask webserver is included as a wrapper around the bot.
 
 ## Location extraction and language determination
 Three methods are implemented: one built on basic NLP methods and two using the Google Natural Language API.
